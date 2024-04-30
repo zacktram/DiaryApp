@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="usernameInput" type="id" />
+    <item name="passwordInput" type="id" />
+    <item name="usernameLoginInput" type="id" />
+    <item name="passwordLoginInput" type="id" />
+    <item name="usernameSignupInput" type="id" />
+    <item name="passwordSignupInput" type="id" />
+</resources>
