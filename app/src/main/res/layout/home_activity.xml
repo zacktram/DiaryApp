@@ -19,17 +19,16 @@
     />
 
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/entryList"
+        <ListView
+            android:id="@+id/entryListView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/homePageTitle"
             android:layout_above="@id/bottomAppBar"
-            tools:listitem="@layout/entry_item"
-            tools:itemCount="3" >
-
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_marginTop="3sp"
+            android:dividerHeight="3sp"
+            android:divider="@color/darkGray"
+        />
 
 
 

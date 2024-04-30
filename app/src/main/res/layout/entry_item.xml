@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:padding="10sp" >
+    android:layout_height="100sp"
+    android:padding="15sp" >
 
     <TextView
         android:id="@+id/entryItemTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp" />
+        android:text="Title"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:textColor="@color/darkGray"
+        android:textSize="25sp"
+        android:layout_alignParentLeft="true"
+    />
 
     <TextView
-        android:id="@+id/entryItemDate"
+        android:id="@+id/entryItemBody"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp" />
+        android:text="Body"
+        android:maxLines="1"
+        android:textColor="@color/darkGray"
+        android:textSize="20sp"
+        android:layout_marginTop="5sp"
+        android:layout_below="@id/entryItemTitle"
+        android:layout_alignParentLeft="true"
+    />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/deleteEntryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:onClick="DeleteEntry"
+    />
+
+</RelativeLayout>

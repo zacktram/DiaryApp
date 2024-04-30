@@ -11,22 +11,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
-public class MainActivity extends AppCompatActivity {
+public class StartingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.starting_activity);
     }
 
     public void SignUp(View v) {
-        Intent intent = new Intent(MainActivity.this, SignUp.class);
+        Intent intent = new Intent(StartingActivity.this, SignUpActivity.class);
         startActivity(intent);
     }
 
     public void VerifyUser(View v) {
-        Intent intent = new Intent(MainActivity.this, HomePage.class);
+        Intent intent = new Intent(StartingActivity.this, HomeActivity.class);
 
         EditText usernameInput = (EditText)findViewById(R.id.usernameLoginInput);
         String username = usernameInput.getText().toString();
