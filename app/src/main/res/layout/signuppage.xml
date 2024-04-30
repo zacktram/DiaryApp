@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/signupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textSize="100sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175sp"
+    />
+
+    <EditText
+        android:id="@id/usernameSignupInput"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/signupText"
+        android:layout_marginTop="50sp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter username"
+        />
+
+    <EditText
+        android:id="@id/passwordSignupInput"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/usernameSignupInput"
+        android:layout_marginTop="25sp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+    />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordSignupInput"
+        android:layout_centerHorizontal="true" >
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="125sp"
+        android:layout_height="75sp"
+        android:text="Sign Up"
+        android:textSize="20sp"
+        android:layout_marginTop="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="10sp"
+    />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="125sp"
+        android:layout_height="75sp"
+        android:text="Cancel"
+        android:textSize="20sp"
+        android:layout_marginTop="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10sp"
+        android:onClick="ReturnToLogin"
+    />
+</LinearLayout>
+
+</RelativeLayout>
