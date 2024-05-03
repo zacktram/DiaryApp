@@ -18,10 +18,10 @@
     />
 
     <TextView
-        android:id="@+id/entryItemBody"
+        android:id="@+id/entryItemCreatedOnDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Body"
+        android:text="Created On"
         android:maxLines="1"
         android:textColor="@color/darkGray"
         android:textSize="20sp"
@@ -29,15 +29,5 @@
         android:layout_below="@id/entryItemTitle"
         android:layout_alignParentLeft="true"
     />
-
-    <Button
-        android:id="@+id/deleteEntryButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:onClick="DeleteEntry"
-    />
-
+    
 </RelativeLayout>

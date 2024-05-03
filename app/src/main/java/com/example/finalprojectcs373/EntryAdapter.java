@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.net.ContentHandler;
+import java.text.DateFormat;
 import java.util.List;
 
 public class EntryAdapter extends ArrayAdapter<Entry> {
@@ -29,10 +30,10 @@ public class EntryAdapter extends ArrayAdapter<Entry> {
         }
 
         TextView title = convertView.findViewById(R.id.entryItemTitle);
-        TextView body = convertView.findViewById(R.id.entryItemBody);
+        TextView createdOn = convertView.findViewById(R.id.entryItemCreatedOnDate);
 
         title.setText(entry.getTitle());
-        body.setText(entry.getBody());
+        createdOn.setText(entry.getBody());
 
         return convertView;
     }

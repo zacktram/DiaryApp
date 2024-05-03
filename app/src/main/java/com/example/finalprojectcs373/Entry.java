@@ -12,6 +12,7 @@ public class Entry {
     private String title;
     private String body;
     private Date createdOn;
+    private Date deletedOn;
 
     public Entry(int id, String title, String body, Date createdOn) {
         this.id = id;
@@ -32,7 +33,6 @@ public class Entry {
                 return entry;
             }
         }
-
         return null;
     }
 
@@ -67,4 +67,13 @@ public class Entry {
     public void setCreatedOn(Date createdOn) {
         this.createdOn = createdOn;
     }
+
+    public Date getDeletedOn() {
+        return deletedOn;
+    }
+
+    public void setDeletedOn(Date deletedOn) {
+        this.deletedOn = deletedOn;
+    }
+
 }

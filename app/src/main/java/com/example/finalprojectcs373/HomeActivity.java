@@ -13,10 +13,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Date;
+
 public class HomeActivity extends AppCompatActivity {
 
     private ListView entryListView;
     private Entry selectedEntry;
+    private Entry entry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,12 @@ public class HomeActivity extends AppCompatActivity {
         LoadFromDbToMemory();
         setEntryAdapter();
         setOnClickListener();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setEntryAdapter();
     }
 
     private void initWidgets() {
@@ -78,13 +87,6 @@ public class HomeActivity extends AppCompatActivity {
     public void AddNewEntry(View v) {
         Intent intent = new Intent(this, NewEntryActivity.class);
         startActivity(intent);
-    }
-
-    // Work in Progress
-    public void DeleteEntry(View v) {
-
-        int passedEntryId = this.selectedEntry.getId();
-
     }
 
 }

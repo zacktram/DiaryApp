@@ -8,6 +8,7 @@
 
 
     <LinearLayout
+        android:id="@+id/entryContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
@@ -33,19 +34,25 @@
 
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/submitEntryFab"
+    <Button
+        android:id="@+id/submitEntryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/submit_symbol"
+        android:text="Save Entry"
         android:layout_margin="16sp"
         android:clickable="true"
         android:onClick="SubmitNewEntry"
         android:layout_alignParentRight="true"
     />
 
-
-
-
+    <Button
+        android:id="@+id/deleteEntryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Entry"
+        android:layout_margin="16sp"
+        android:onClick="DeleteEntry"
+        android:clickable="true"
+    />
 
 </RelativeLayout>

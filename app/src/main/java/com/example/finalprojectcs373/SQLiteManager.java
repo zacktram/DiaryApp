@@ -18,8 +18,6 @@ public class SQLiteManager extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "EntryDB";
     private static final int DATABASE_VERSION = 1;
     private static final String TABLE_NAME = "Entry";
-    private static final String COUNTER = "Counter";
-
     private static final String ID_FIELD = "id";
     private static final String TITLE_FIELD = "title";
     private static final String BODY_FIELD = "body";
@@ -47,10 +45,8 @@ public class SQLiteManager extends SQLiteOpenHelper {
                 .append("CREATE TABLE ")
                 .append(TABLE_NAME)
                 .append("(")
-                .append(COUNTER)
-                .append(" INTEGER PRIMARY KEY AUTOINCREMENT, ")
                 .append(ID_FIELD)
-                .append(" INT, ")
+                .append(" INTEGER PRIMARY KEY AUTOINCREMENT, ")
                 .append(TITLE_FIELD)
                 .append(" TEXT, ")
                 .append(BODY_FIELD)
@@ -77,6 +73,21 @@ public class SQLiteManager extends SQLiteOpenHelper {
         contentValues.put(CREATED_ON_FIELD, getStringFromDate(entry.getCreatedOn()));
 
         sqLiteDatabase.insert(TABLE_NAME, null, contentValues);
+    }
+
+    public void deleteEntryInDB(Entry entry) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
+        StringBuilder sql;
+        sql = new StringBuilder()
+                .append("DELETE FROM ")
+                .append(TABLE_NAME)
+                .append(" WHERE ")
+                .append(ID_FIELD)
+                .append(" = ")
+                .append(entry.getId());
+
+        sqLiteDatabase.execSQL(sql.toString());
     }
 
     public void updateEntryInDB(Entry entry) {
