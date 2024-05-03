@@ -6,6 +6,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -24,7 +28,7 @@ public class SQLiteManager extends SQLiteOpenHelper {
     private static final String CREATED_ON_FIELD = "createdOn";
 
     @SuppressLint("SimpleDateFormat")
-    private static final DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
+    private static final DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
 
     public SQLiteManager(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -70,7 +74,7 @@ public class SQLiteManager extends SQLiteOpenHelper {
         contentValues.put(ID_FIELD, entry.getId());
         contentValues.put(TITLE_FIELD, entry.getTitle());
         contentValues.put(BODY_FIELD, entry.getBody());
-        contentValues.put(CREATED_ON_FIELD, getStringFromDate(entry.getCreatedOn()));
+        contentValues.put(CREATED_ON_FIELD, entry.getCreatedOn());
 
         sqLiteDatabase.insert(TABLE_NAME, null, contentValues);
     }
@@ -98,7 +102,7 @@ public class SQLiteManager extends SQLiteOpenHelper {
         contentValues.put(ID_FIELD, entry.getId());
         contentValues.put(TITLE_FIELD, entry.getTitle());
         contentValues.put(BODY_FIELD, entry.getBody());
-        contentValues.put(CREATED_ON_FIELD, getStringFromDate(entry.getCreatedOn()));
+        contentValues.put(CREATED_ON_FIELD, entry.getCreatedOn());
 
         sqLiteDatabase.update(TABLE_NAME, contentValues, ID_FIELD + " =? ", new String[]{String.valueOf(entry.getId())});
     }
@@ -109,16 +113,17 @@ public class SQLiteManager extends SQLiteOpenHelper {
         try (Cursor result = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME, null)){
             if (result.getCount() != 0) {
                 while (result.moveToNext()) {
-                    int id = result.getInt(1);
-                    String title = result.getString(2);
-                    String body = result.getString(3);
-                    String stringCreatedOn = result.getString(4);
-                    Date createdOn = getDateFromString(stringCreatedOn);
+                    int id = result.getInt(0);
+                    String title = result.getString(1);
+                    String body = result.getString(2);
+                    String createdOn = result.getString(3);
 
                     Entry entry = new Entry(id, title, body, createdOn);
                     Entry.entryArrayList.add(entry);
                 }
             }
+        } catch (Exception error1){
+            error1.printStackTrace();
         }
     }
 

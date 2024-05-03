@@ -11,10 +11,9 @@ public class Entry {
     private int id;
     private String title;
     private String body;
-    private Date createdOn;
-    private Date deletedOn;
+    private String createdOn;
 
-    public Entry(int id, String title, String body, Date createdOn) {
+    public Entry(int id, String title, String body, String createdOn) {
         this.id = id;
         this.title = title;
         this.body = body;
@@ -60,20 +59,13 @@ public class Entry {
         this.body = body;
     }
 
-    public Date getCreatedOn() {
+    public String getCreatedOn() {
         return createdOn;
     }
 
-    public void setCreatedOn(Date createdOn) {
+    public void setCreatedOn(String createdOn) {
         this.createdOn = createdOn;
     }
 
-    public Date getDeletedOn() {
-        return deletedOn;
-    }
-
-    public void setDeletedOn(Date deletedOn) {
-        this.deletedOn = deletedOn;
-    }
 
 }

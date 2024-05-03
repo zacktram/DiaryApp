@@ -9,6 +9,9 @@ import android.widget.EditText;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class NewEntryActivity extends AppCompatActivity {
@@ -54,7 +57,7 @@ public class NewEntryActivity extends AppCompatActivity {
         SQLiteManager sqLiteManager = SQLiteManager.instanceOfDatabase(this);
         String title = String.valueOf(entryTitleEditText.getText());
         String body = String.valueOf(entryBodyEditText.getText());
-        Date createdOn = new Date();
+        String createdOn = DateFormat.getDateInstance().format(new Date());
 
         if (selectedEntry == null) {
 
@@ -72,7 +75,6 @@ public class NewEntryActivity extends AppCompatActivity {
     }
 
     public void DeleteEntry(View v) {
-        selectedEntry.setDeletedOn(new Date());
         SQLiteManager sqLiteManager = SQLiteManager.instanceOfDatabase(this);
         sqLiteManager.deleteEntryInDB(selectedEntry);
         Entry.entryArrayList.remove(selectedEntry);

@@ -18,8 +18,6 @@ import java.util.Date;
 public class HomeActivity extends AppCompatActivity {
 
     private ListView entryListView;
-    private Entry selectedEntry;
-    private Entry entry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

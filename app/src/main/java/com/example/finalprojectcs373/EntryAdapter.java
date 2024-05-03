@@ -33,7 +33,7 @@ public class EntryAdapter extends ArrayAdapter<Entry> {
         TextView createdOn = convertView.findViewById(R.id.entryItemCreatedOnDate);
 
         title.setText(entry.getTitle());
-        createdOn.setText(entry.getBody());
+        createdOn.setText("Created On: " + entry.getCreatedOn().toString());
 
         return convertView;
     }
