@@ -15,16 +15,20 @@
         <activity
             android:name=".NewEntryActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="uiMode" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="uiMode" />
         <activity
             android:name=".SignUpActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="uiMode" />
         <activity
             android:name=".StartingActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:configChanges="uiMode" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

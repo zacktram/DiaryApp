@@ -2,10 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_centerInParent="true"
-    android:background="@drawable/gradient_background">
+    style="@style/SCREEN" >
 
     <TextView
         android:id="@+id/homePageTitle"
@@ -16,6 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45sp"
+        style="@style/TEXT_COLOR"
     />
 
 <LinearLayout
@@ -27,11 +26,11 @@
 
     <ListView
         android:id="@+id/entryListView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:dividerHeight="1sp"
-        android:divider="@color/gray"
         android:layout_weight="1"
+        style="@style/DIVIDER_COLOR"
     />
 
 </LinearLayout>
@@ -53,8 +52,9 @@
             android:src="@drawable/plus_symbol"
             android:layout_margin="16sp"
             android:clickable="true"
+            android:focusable="auto"
             android:onClick="AddNewEntry"
-            android:backgroundTint="@color/white"
+            style="@style/BUTTON"
         />
 
         <Button
@@ -63,12 +63,11 @@
             android:layout_height="60sp"
             android:text="Logout"
             android:textSize="18sp"
-            android:textColor="@color/black"
             android:layout_margin="16sp"
             android:layout_alignParentBottom="true"
             android:onClick="ReturnToLoginHome"
             android:layout_gravity="bottom|start"
-            android:backgroundTint="@color/white"
+            style="@style/BUTTON"
         />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -61,7 +61,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setEntryAdapter() {
-        EntryAdapter entryAdapter = new EntryAdapter(getApplicationContext(), Entry.entryArrayList);
+        EntryAdapter entryAdapter = new EntryAdapter(this, Entry.entryArrayList);
         entryListView.setAdapter(entryAdapter);
     }
 

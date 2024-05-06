@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="gray">#5A5A5A</color>
+    <color name="purple">#673AB7</color>
+    <color name="nightModeTextColor">#D1CFCF</color>
 </resources>

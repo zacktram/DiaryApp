@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
-    android:background="@drawable/gradient_background">
+    style="@style/SCREEN" >
 
     <TextView
         android:id="@+id/signupText"
@@ -14,6 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="175sp"
+        style="@style/TEXT_COLOR"
     />
 
     <EditText
@@ -24,6 +25,7 @@
         android:layout_marginTop="50sp"
         android:layout_centerHorizontal="true"
         android:hint="Enter username"
+        style="@style/TEXT_COLOR"
         />
 
     <EditText
@@ -35,6 +37,7 @@
         android:layout_centerHorizontal="true"
         android:hint="Enter password"
         android:inputType="textPassword"
+        style="@style/TEXT_COLOR"
     />
 
     <LinearLayout
@@ -52,6 +55,7 @@
         android:layout_marginTop="25sp"
         android:layout_centerHorizontal="true"
         android:layout_marginRight="10sp"
+        style="@style/BUTTON"
     />
 
     <Button
@@ -64,6 +68,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10sp"
         android:onClick="ReturnToLogin"
+        style="@style/BUTTON"
     />
 </LinearLayout>
 

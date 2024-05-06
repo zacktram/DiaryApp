@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
-    android:background="@drawable/gradient_background"
-    android:fitsSystemWindows="true" >
+    android:fitsSystemWindows="true"
+    style="@style/SCREEN" >
 
 
     <LinearLayout
@@ -21,6 +21,7 @@
             android:layout_marginTop="60sp"
             android:hint="Title"
             android:layout_weight="0"
+            style="@style/TEXT_COLOR"
         />
 
         <EditText
@@ -31,6 +32,7 @@
             android:layout_weight="1"
             android:hint="Body"
             android:gravity="top"
+            style="@style/TEXT_COLOR"
         />
 
     </LinearLayout>
@@ -44,6 +46,7 @@
         android:clickable="true"
         android:onClick="SubmitNewEntry"
         android:layout_alignParentRight="true"
+        style="@style/BUTTON"
     />
 
     <Button
@@ -54,6 +57,7 @@
         android:layout_margin="16sp"
         android:onClick="DeleteEntry"
         android:clickable="true"
+        style="@style/BUTTON"
     />
 
 </RelativeLayout>
