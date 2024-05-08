@@ -16,7 +16,8 @@
             android:name=".NewEntryActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize"
-            android:configChanges="uiMode" />
+            android:configChanges="uiMode"
+                                            />
         <activity
             android:name=".HomeActivity"
             android:exported="false"

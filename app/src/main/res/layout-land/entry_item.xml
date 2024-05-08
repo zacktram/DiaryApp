@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10sp" >
+
+    <TextView
+        android:id="@+id/entryItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textStyle="bold"
+        android:maxLines="1"
+        style="@style/TEXT_COLOR"
+        android:textSize="25sp"
+        android:layout_alignParentLeft="true"
+    />
+
+    <TextView
+        android:id="@+id/entryItemCreatedOnDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created On"
+        android:maxLines="1"
+        style="@style/TEXT_COLOR"
+        android:textSize="20sp"
+        android:layout_below="@id/entryItemTitle"
+        android:layout_alignParentLeft="true"
+    />
+    
+</RelativeLayout>

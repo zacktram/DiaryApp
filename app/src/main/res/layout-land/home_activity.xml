@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
-    style="@style/SCREEN" >
+    style="@style/SCREEN">
 
     <TextView
         android:id="@+id/homePageTitle"
@@ -13,7 +14,7 @@
         android:textSize="75sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25sp"
+        android:layout_marginTop="20sp"
         style="@style/TEXT_COLOR"
     />
 
@@ -22,7 +23,7 @@
     android:layout_height="match_parent"
     android:layout_below="@id/homePageTitle"
     android:layout_above="@id/bottomAppBar"
-    android:layout_marginTop="3sp" >
+    android:layout_marginTop="1sp" >
 
     <ListView
         android:id="@+id/entryListView"
@@ -41,16 +42,17 @@
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:padding="10sp" >
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addEntryFab"
             android:layout_width="wrap_content"
-            android:layout_height="60sp"
+            android:layout_height="wrap_content"
+            app:fabCustomSize="45sp"
             android:layout_gravity="bottom|end"
-            android:src="@drawable/plus_symbol"
-            android:layout_margin="16sp"
+            android:src="@drawable/plus_small"
             android:clickable="true"
             android:focusable="auto"
             android:onClick="AddNewEntry"
@@ -60,10 +62,9 @@
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
-            android:layout_height="60sp"
+            android:layout_height="wrap_content"
             android:text="Logout"
             android:textSize="18sp"
-            android:layout_margin="16sp"
             android:layout_alignParentBottom="true"
             android:onClick="ReturnToLoginHome"
             android:layout_gravity="bottom|start"
