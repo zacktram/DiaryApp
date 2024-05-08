@@ -25,6 +25,7 @@ public class StartingActivity extends AppCompatActivity implements SensorEventLi
     private SensorManager sensorManager;
     private Sensor lightSensor;
     private float lightValue;
+
     // private Notification notificationManager = new Notification();
 
     @Override

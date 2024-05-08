@@ -104,7 +104,8 @@ public class SQLiteManager extends SQLiteOpenHelper {
         contentValues.put(BODY_FIELD, entry.getBody());
         contentValues.put(CREATED_ON_FIELD, entry.getCreatedOn());
 
-        sqLiteDatabase.update(TABLE_NAME, contentValues, ID_FIELD + " =? ", new String[]{String.valueOf(entry.getId())});
+        sqLiteDatabase.update(TABLE_NAME, contentValues, ID_FIELD + " =? ",
+                new String[]{String.valueOf(entry.getId())});
     }
 
     public void populateEntryListArray() {
@@ -131,7 +132,6 @@ public class SQLiteManager extends SQLiteOpenHelper {
         if (date == null) {
             return null;
         }
-
         return dateFormat.format(date);
     }
 
