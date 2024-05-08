@@ -13,6 +13,7 @@ public class LocationNotificationManager {
 
     private static final String CHANNEL_ID = "location_notification_channel";
     private static final int NOTIFICATION_ID = 1;
+    private Notification notification;
 
     private final Context context;
     private final NotificationManager notificationManager;
@@ -37,7 +38,6 @@ public class LocationNotificationManager {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
         // Build the notification
-        Notification notification = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             notification = new Notification.Builder(context, CHANNEL_ID)
                     .setContentTitle("You are near your destination")
