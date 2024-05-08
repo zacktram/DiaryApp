@@ -25,12 +25,14 @@ public class StartingActivity extends AppCompatActivity implements SensorEventLi
     private SensorManager sensorManager;
     private Sensor lightSensor;
     private float lightValue;
+    // private Notification notificationManager = new Notification();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         initWidgets();
+       // notificationManager.getPermission(this, this);
         setContentView(R.layout.starting_activity);
     }
 
