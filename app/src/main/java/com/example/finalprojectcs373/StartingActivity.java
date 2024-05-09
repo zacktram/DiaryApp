@@ -59,7 +59,7 @@ public class StartingActivity extends AppCompatActivity implements SensorEventLi
         EditText passwordInput = (EditText) findViewById(R.id.passwordLoginInput);
         String password = passwordInput.getText().toString();
 
-        if (username.equals("admin") && password.equals("admin")) {
+        if (username.equals(getUsername()) && password.equals(getPassword())) {
             startActivity(intent);
         } else {
             Snackbar snackbar = Snackbar.make(v, "Incorrect Username or Password", BaseTransientBottomBar.LENGTH_SHORT);
@@ -86,6 +86,16 @@ public class StartingActivity extends AppCompatActivity implements SensorEventLi
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int i) {
+
+    }
+
+    public String getUsername() {
+       return ((DiaryApp) this.getApplication()).getUsername();
+    }
+
+    public String getPassword() {
+
+        return ((DiaryApp) this.getApplication()).getPassword();
 
     }
 }
