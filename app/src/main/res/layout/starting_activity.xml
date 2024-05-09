@@ -9,13 +9,6 @@
     android:layout_centerInParent="true"
     style="@style/SCREEN" >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="SendNotification"
-        android:layout_above="@id/mottoText"
-    />
-
     <TextView
         android:id="@+id/diaryText"
         android:layout_width="wrap_content"

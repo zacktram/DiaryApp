@@ -37,7 +37,6 @@ public class StartingActivity extends AppCompatActivity implements SensorEventLi
         EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         initWidgets();
-        // notificationManager.getPermission(this, this);
         setContentView(R.layout.starting_activity);
     }
 
