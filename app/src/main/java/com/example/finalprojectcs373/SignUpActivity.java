@@ -39,7 +39,7 @@ public class SignUpActivity extends AppCompatActivity {
     public void SignUpUser(View v) {
         Intent i = new Intent(this, StartingActivity.class);
 
-        ((DiaryApp) this.getApplication()).setUsername(String.valueOf(usernameInput.getText()));
+        ((DiaryApp) this.getApplication()).setUsername(String.valueOf(usernameInput.getText()).toLowerCase());
         ((DiaryApp) this.getApplication()).setPassword(String.valueOf(passwordInput.getText()));
 
         Log.d("globalVariable", ((DiaryApp) this.getApplication()).getUsername());
